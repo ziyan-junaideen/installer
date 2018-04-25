@@ -13,7 +13,7 @@
     dest: "{{ playbook_dir }}/consul"
     clone: yes
     version: installer
-  when: consul_repo.stat.exists == False 
+  when: consul_repo.stat.exists == False
 
 - name: Copy deploy.rb (locally)
   hosts: 127.0.0.1
@@ -53,17 +53,17 @@
     line: '/config/deploy'
 
 - name: Creates shared folder
-  file: 
+  file:
     path: /home/{{ deploy_user }}/consul/shared
-    state: directory    
+    state: directory
     owner: deploy
     group: wheel
     mode: 0755
 
 - name: Creates shared config folder
-  file: 
+  file:
     path: /home/{{ deploy_user }}/consul/shared/config
-    state: directory    
+    state: directory
     owner: deploy
     group: wheel
     mode: 0755
@@ -116,7 +116,7 @@
     chdir: "{{ playbook_dir }}/{{ app_name }}"
     executable: /bin/bash
 
-- name: Create unicorn 
+- name: Create unicorn
   file:
     path: "/home/deploy/consul/shared/{{ item }}"
     state: directory
@@ -124,8 +124,8 @@
     group: wheel
     mode: 0775
   with_items:
-    - "pids" 
-    - "sockets" 
+    - "pids"
+    - "sockets"
     - "log"
 
 - name: Check that Unicorn is running
@@ -144,6 +144,6 @@
   when: unicorn_process.stat.exists == True
 
 - name: Start Unicorn
-  shell: "/home/deploy/.rvm/gems/ruby-2.3.2/wrappers/unicorn -c config/unicorn.rb -E production -D"
+  shell: "/home/deploy/.rvm/gems/ruby-{{ ruby_version }}/wrappers/unicorn -c config/unicorn.rb -E production -D"
   args:
     chdir: /home/{{ deploy_user }}/consul/current

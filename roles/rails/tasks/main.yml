@@ -10,7 +10,7 @@
     repo: https://github.com/consul/consul.git
     dest: /home/{{ deploy_user }}/consul
     clone: yes
-  when: consul_repo.stat.exists == False 
+  when: consul_repo.stat.exists == False
 
 - name: Deploy user permissions
   file:
@@ -44,7 +44,7 @@
 
 - name: Create Database
   become_user: deploy
-  shell: "source /home/deploy/.rvm/scripts/rvm && /home/deploy/.rvm/gems/ruby-2.3.2/bin/rake db:migrate RAILS_ENV=production"
+  shell: "source /home/deploy/.rvm/scripts/rvm && /home/deploy/.rvm/gems/ruby-{{ ruby_version }}/bin/rake db:migrate RAILS_ENV=production"
   args:
     chdir: /home/{{ deploy_user }}/consul
     executable: /bin/bash
