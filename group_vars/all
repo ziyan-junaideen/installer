@@ -1,17 +1,17 @@
 ---
 app_name: consul
-server_hostname: "{{ ansible_default_ipv4.address }}"
-secret_key_base: "change_me"
+server_hostname: 165.227.72.56
+secret_key_base: e9546b7d8d7da167d62f5ccb34e4d7d08b8443ce00bbe408cf7a77ab1ddd9506dea7a27c5aeba8627745dee09b9651745cd03298f8e413669e46ced79933a99c
 
 # Server Timzone + Locale
-timezone: Europe/Madrid
+timezone: EST
 locale: en_US.UTF-8
 
 # General settings
 deploy_dir: /home/deploy/
 deploy_user: deploy
-deploy_password: test
-deploy_app_name: test
+deploy_password: joke-anymore-sage-dubai
+deploy_app_name: consul
 deploy_server_hostname: 127.0.0.1
 shared_dirs:
   - releases
@@ -36,16 +36,16 @@ rvm1_install_path: "/home/{{ deploy_user }}/.rvm"
 postgresql_version: 9.6
 database_name: "consul_production"
 database_user: "deploy"
-database_password: "deploy"
+database_password: "JUDGMENT-plot-STUFF-MARTIN"
 database_hostname: "localhost"
 database_port: 5432
 
 #SMTP
-smtp_address:        "smtp.sendgrid.net"
-smtp_port:           25
-smtp_domain:         "example.com"
-smtp_user_name:      "apikey"
-smtp_password:       "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"
+smtp_address:        "smtp.mailgun.org"
+smtp_port:           587
+smtp_domain:         "mail.demo.consul.participatorybudgeting.org"
+smtp_user_name:      "postmaster@mail.pbnyc.participatorybudgeting.org"
+smtp_password:       "8658fd9d59f05e308c68cf7fa83cc735-0e6e8cad-02403ebc"
 smtp_authentication: "plain"
 
 postgresql_users:
