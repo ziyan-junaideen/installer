@@ -1,17 +1,17 @@
 ---
 app_name: consul
-server_hostname: "{{ ansible_default_ipv4.address }}"
-secret_key_base: "change_me"
+server_hostname: 159.89.40.239
+secret_key_base: 80d159ee59268d9cbf323eff5e4700a7f72796afd8fdf5a3475eb9d83a5b51f5cfc9d9ab79aaff71054f10abead67517ee5dea8eb2c9bf044ac3f16272e375c3
 
 # Server Timzone + Locale
-timezone: Europe/Madrid
+timezone: EST
 locale: en_US.UTF-8
 
 # General settings
 deploy_dir: /home/deploy/
 deploy_user: deploy
-deploy_password: test
-deploy_app_name: test
+deploy_password: STRIKES-gains-actual-GOLD
+deploy_app_name: consul
 deploy_server_hostname: 127.0.0.1
 shared_dirs:
   - releases
@@ -36,16 +36,16 @@ rvm1_install_path: "/home/{{ deploy_user }}/.rvm"
 postgresql_version: 9.6
 database_name: "consul_production"
 database_user: "deploy"
-database_password: "deploy"
+database_password: "FEET-HOOK-minister-benefit"
 database_hostname: "localhost"
 database_port: 5432
 
 #SMTP
-smtp_address:        "smtp.sendgrid.net"
-smtp_port:           25
-smtp_domain:         "example.com"
-smtp_user_name:      "apikey"
-smtp_password:       "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"
+smtp_address:        "smtp.mailgun.org"
+smtp_port:           587
+smtp_domain:         "mail.lopc.consulted.solutions"
+smtp_user_name:      "postmaster@mail.pbnyc.participatorybudgeting.org"
+smtp_password:       "8658fd9d59f05e308c68cf7fa83cc735-0e6e8cad-02403ebc"
 smtp_authentication: "plain"
 
 postgresql_users:
