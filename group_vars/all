@@ -1,4 +1,7 @@
 ---
+git_repo: https://github.com/consul/consul.git
+git_version: master
+
 app_name: consul
 server_hostname: 159.89.40.239
 secret_key_base: 80d159ee59268d9cbf323eff5e4700a7f72796afd8fdf5a3475eb9d83a5b51f5cfc9d9ab79aaff71054f10abead67517ee5dea8eb2c9bf044ac3f16272e375c3
