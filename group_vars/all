@@ -1,4 +1,7 @@
 ---
+git_repo: https://github.com/ziyan-junaideen/consul.git
+git_version: feature/ideas
+
 app_name: consul
 server_hostname: 165.227.72.56
 secret_key_base: e9546b7d8d7da167d62f5ccb34e4d7d08b8443ce00bbe408cf7a77ab1ddd9506dea7a27c5aeba8627745dee09b9651745cd03298f8e413669e46ced79933a99c
